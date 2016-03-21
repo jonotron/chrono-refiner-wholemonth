@@ -12,7 +12,7 @@ test('test single months', t => {
   const janStart = moment('2016-01-01')
   const janEnd = moment('2016-01-31')
 
-  t.ok(moment(dates.start).isSame(janStart, 'day'))
-  t.ok(moment(dates.end).isSame(janEnd, 'day'))
+  t.ok(moment(dates[0].start.date()).isSame(janStart, 'day'))
+  t.ok(moment(dates[0].end.date()).isSame(janEnd, 'day'))
   t.end()
 })
