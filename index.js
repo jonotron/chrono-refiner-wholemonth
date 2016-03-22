@@ -8,7 +8,7 @@ export default refiner
 refiner.refine = refine
 
 function refine (text, results, opt) {
-  results.map(r => {
+  return results.map(r => {
     if (!isOnlyCertainMonth(r.start)
         && r.end
         && !isOnlyCertainMonth(r.end))
@@ -33,7 +33,6 @@ function refine (text, results, opt) {
 
     return r
   })
-  return results
 }
 
 function isOnlyCertainMonth (date) {
