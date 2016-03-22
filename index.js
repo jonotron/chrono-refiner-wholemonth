@@ -14,14 +14,16 @@ function refine (text, results, opt) {
         && !isOnlyCertainMonth(r.end))
       return r
 
+    if (!r.end) 
+      r.end = r.start.clone() 
+
     r.start.imply('day', 1)
     r.start.imply('hour', 0)
     r.start.imply('minute', 0)
     r.start.imply('second', 0)
     r.start.imply('millisecond', 0)
 
-    r.end = new ParsedComponents(r.start, r.ref)
-    const momentEnd = moment(r.start.date()).endOf('month')
+    const momentEnd = moment(r.end.date()).endOf('month')
     r.end.assign('month', momentEnd.get('month') + 1)
     r.end.imply('day', momentEnd.get('date'))
     r.end.imply('hour', momentEnd.get('hour'))
