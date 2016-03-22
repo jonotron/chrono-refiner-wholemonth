@@ -48,6 +48,19 @@ test('spanning the new year', t => {
   const febEnd = moment('2016-02-29')
 
   t.ok(moment(dates[0].start.date()).isSame(decStart, 'day'), 'start dec 1')
-  t.ok(moment(dates[0].end.date()).isSame(febEnd, 'day'), 'end feb 29')
+  t.ok(moment(dates[0].end.date()).isSame(febEnd, 'day'), 'end feb 28')
+  t.end()
+})
+
+test.skip('spanning the new year with a specific year', t => {
+  const dates = parser.parse('Dec - Feb 2015')
+
+  const decStart = moment('2014-12-01')
+  const febEnd = moment('2015-02-28')
+
+  console.log(dates[0])
+
+  t.ok(moment(dates[0].start.date()).isSame(decStart, 'day'), 'start dec 1')
+  t.ok(moment(dates[0].end.date()).isSame(febEnd, 'day'), 'end feb 28')
   t.end()
 })
