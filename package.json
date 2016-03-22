@@ -1,7 +1,8 @@
 {
   "name": "chrono-refiner-wholemonth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A chrono refiner to extract whole month ranges",
+  "repository": "https://github.com/jonotron/chrono-refiner-wholemonth.git",
   "main": "index.js",
   "scripts": {
     "test": "tape --require babel-register test.js"
