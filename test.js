@@ -41,7 +41,7 @@ test.skip('specific year', t => {
   t.end()
 })
 
-test('spanning a year', t => {
+test('spanning the new year', t => {
   const dates = parser.parse('Dec - Feb')
 
   const decStart = moment('2015-12-01')
