@@ -1,6 +1,6 @@
 {
   "name": "chrono-refiner-wholemonth",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A chrono refiner to extract whole month ranges",
   "main": "index.js",
   "scripts": {
