@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jonotron/chrono-refiner-wholemonth.svg?branch=master)](https://travis-ci.org/jonotron/chrono-refiner-wholemonth)
+[![Build Status](https://semaphoreci.com/api/v1/twostoryrobot/chrono-refiner-wholemonth/branches/master/shields_badge.svg)](https://semaphoreci.com/twostoryrobot/chrono-refiner-wholemonth)
 
 # chrono-refiner-wholemonth
 A chrono refiner for returning whole month ranges

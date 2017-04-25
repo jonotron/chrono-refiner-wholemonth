@@ -9,7 +9,7 @@ parser.refiners.push(wholeMonth)
 const ref = new Date('2016-03-15') // March 15, 2016
 
 test('single month in the past', t => {
-  const dates = parser.parse('Jan')  
+  const dates = parser.parse('Jan', ref)  
 
   const janStart = moment('2016-01-01')
   const janEnd = moment('2016-01-31')
@@ -20,7 +20,7 @@ test('single month in the past', t => {
 })
 
 test('month range in the past', t => {
-  const dates = parser.parse('Jan - Feb')  
+  const dates = parser.parse('Jan - Feb', ref)  
 
   const janStart = moment('2016-01-01')
   const febEnd = moment('2016-02-29')
@@ -31,7 +31,7 @@ test('month range in the past', t => {
 })
 
 test('specific year', t => {
-  const dates = parser.parse('Jan - Feb 2015')
+  const dates = parser.parse('Jan - Feb 2015', ref)
 
   const janStart = moment('2015-01-01')
   const febEnd = moment('2015-02-28')
@@ -42,7 +42,7 @@ test('specific year', t => {
 })
 
 test('spanning the new year', t => {
-  const dates = parser.parse('Dec - Feb')
+  const dates = parser.parse('Dec - Feb', ref)
 
   const decStart = moment('2015-12-01')
   const febEnd = moment('2016-02-29')
@@ -53,7 +53,7 @@ test('spanning the new year', t => {
 })
 
 test.skip('spanning the new year with a specific year', t => {
-  const dates = parser.parse('Dec - Feb 2015')
+  const dates = parser.parse('Dec - Feb 2015', ref)
 
   const decStart = moment('2014-12-01')
   const febEnd = moment('2015-02-28')
